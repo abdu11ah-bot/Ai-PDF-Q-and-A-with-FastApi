@@ -40,7 +40,7 @@ sessions: dict[str, dict] = {}
 # ─── Routes ────────────────────────────────────────────────────────────────────
 @app.get("/", response_class=HTMLResponse)
 async def root():
-    return FileResponse("static/index.html")
+    return FileResponse("app/static/index.html")
 
 
 @app.post("/upload", response_model=UploadResponse)
